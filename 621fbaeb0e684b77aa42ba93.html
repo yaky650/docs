@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+                                                                                            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta name="description" content="Submit malware for free analysis with Falcon Sandbox and Hybrid Analysis technology. Hybrid Analysis develops and licenses analysis tools to fight malware.">
+                <meta name="keywords" content="sandbox, malware, analysis, online, submit, vxstream, sample, download, trojan, apt">
+                        <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+                <title>
+                            Servicio gratuito de análisis de malware automatizado, con tecnología de Falcon Sandbox
+                    </title>
+                                    <link rel="stylesheet" type="text/css" href="/assets/8953579dc2817a36d5c67c22861d1fb1dfac4fe692509fa2bbf29252b2f5bdde.min.css">
+                            <noscript><div class="container-fluid text-center"><div class="alert alert-warning">Atención: <a href='http://www.enable-javascript.com/' target='_blank'>habilite javascript</a> para ver y utilizar correctamente este servicio de análisis de malware.</div></div></noscript>
+
+        
+            <link rel="stylesheet" type="text/css" href="/assets/61706fc361d706174af32ec0a361e5d74efe2a5ec5fc60ae705384fcc9ace197.min.css">
+    </head>
+
+    <body class="">
+                    <div id="cookie-message-container">
+                <p>Este sitio web utiliza cookies para mejorar su experiencia de navegación. Tenga en cuenta que al continuar utilizando este sitio, usted está de acuerdo con los términos de nuestra <a href="/data-protection-policy" target="_blank">Política de protección de datos.</a></p>
+                <button type="button" class="btn btn-large btn-default">ACCEPT</button>
+            </div>
+        
+                    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                                                    <a class="navbar-brand" href="/"><img src="/img/logo.svg" class="logo" alt="Logo"></a>
+                                            </div>
+                    <div id="menu" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown submissions ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-cube"></i> <span>Sandbox</span> <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li >
+                                        <a href="/submissions/sandbox/files">
+                                            <i class="fas fa-file"></i>
+                                            Files
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="/submissions/sandbox/urls">
+                                            <i class="fas fa-globe-americas"></i> URLs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                                                            <li class="dropdown submissions ">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-file-upload"></i> <span>Quick Scans</span> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li >
+                                            <a href="/submissions/quick-scan/files">
+                                                <i class="fas fa-file"></i>
+                                                Files
+                                            </a>
+                                        </li>
+                                        <li >
+                                            <a href="/submissions/quick-scan/urls">
+                                                <i class="fas fa-globe-americas"></i>
+                                                URLs
+                                            </a>
+                                        </li>
+                                                                            </ul>
+                                </li>
+
+                                                                    <li class="files-collections ">
+                                        <a href="/file-collections">
+                                            <i class="fas fa-copy"></i>
+                                            <span>File Collections</span>
+                                        </a>
+                                    </li>
+                                                            
+                            <li class="dropdown resources">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i> <span id="choose-resources-dropdown">Recursos</span> <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="faq "><a href="/faq"><i class="glyphicon glyphicon-question-sign"></i> FAQ</a></li>
+                                    <li class="api "><a href="/docs/api/v2"><i class="glyphicon glyphicon-cog"></i> API pública</a></li>
+                                                                        <li class="knowledge-base ">
+                                        <a href="/knowledge-base" target="_blank"><i class="glyphicon glyphicon-book"></i> Knowledge Base</a>
+                                    </li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li class="tags "><a href="/tag-cloud" target="_blank"><i class="glyphicon glyphicon-tag"></i> Tag Cloud</a></li>
+                                                                            <li class="tags"><a href="/map" target="_blank"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i> Threat Map</a></li>
+                                                                    </ul>
+                            </li>
+
+                                                                                                <li class="dropdown learn-more">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i> <span id="choose-resources-dropdown">Request Info</span> <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <a href="https://www.crowdstrike.com/endpoint-security-products/falcon-sandbox-malware-analysis/" target="_blank">
+                                                    <i class="fa fa-cloud-upload-alt"></i>
+                                                    <span>Falcon Sandbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.crowdstrike.com/endpoint-security-products/falcon-cyber-threat-search-engine/" target="_blank">
+                                                    <i class="far fa-dot-circle"></i>
+                                                    <span>Falcon MalQuery</span>
+                                                </a>
+                                            </li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li>
+                                                <a href="https://go.crowdstrike.com/HybridAnalysisRequest.html" target="_blank">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                    <span>Falcon Sandbox Free Trial</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                                                                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown more">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="dropdown2">Más</span> <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                                                                                            <li ><a href="/statistics">Estadísticas del servicio web</a></li>
+                                    <li class=""><a href="/advanced-search">Búsqueda avanzada</a></li>
+                                                                            <li class=""><a href="/file-collection/search">File Collection Search</a></li>
+                                                                                                                <li><a href="/feed?json" target="_blank">Flujo público</a></li>
+                                                                        <li><a href="/report-of-the-day" target="_blank">Informe del día</a></li>
+                                                                            <li role="presentation" class="divider"></li>
+                                        <li><a href="https://www.crowdstrike.com/endpoint-security-products/falcon-sandbox-malware-analysis/" target="_blank">Falcon Sandbox Website</a></li>
+                                        <li><a href="https://hybrid-analysis.blogspot.de/" target="_blank">Hybrid Analysis Blog</a></li>
+                                                                                                            <li role="presentation" class="divider"></li>                                                                                                                <li><a href="#" data-toggle="modal" data-target="#language-modal">Language</a></li>
+                                                                                                                <li ><a href="/login">Inicio de sesión</a></li>
+                                        <li ><a href="/signup">Registro</a></li>                                                                    </ul>
+                            </li>
+                        </ul>
+                                                    <form class="navbar-form navbar-right form-search" id="form-simple-search" action="/search">
+                                <fieldset>
+                                     <span class="form-control">
+                                        <i class="glyphicon glyphicon-search search-icon"></i>
+                                         <input type="text" class="simple-search-input" autocomplete="off" name="query"
+                                            data-toggle="popover" data-placement="bottom" data-html="true"
+                                            data-content="
+                                                                                                    <i class='fa fa-database'></i> <a href='/yara-search'><span class='lowprio'> YARA Search</span></a><br>
+                                                    <i class='fa fa-database'></i> <a href='/string-search'><span class='lowprio'> String Search</span></a><br>
+                                                                                                                                                    <i class='fa fa-search'></i> <a href='/file-collection/search'><span class='lowprio'> File Collection Search</span></a><br>
+                                                                                                <i class='fa fa-search'></i> <a href='/advanced-search'><span class='lowprio'> Report Search</span></a>
+                                                " placeholder="IP, Domain, Hash&#8230;">
+                                         <button type="reset" class="btn btn-transparent btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+                                    </span>
+                                </fieldset>
+                            </form>
+                                            </div>
+                </div>
+            </div>
+                        <div class="flash-messages container ">
+                                                                                                                                        <div id="hidden-danger-alert-container" class="alert alert-danger" style="display: none">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span></span>
+            </div>
+        </div>
+
+            <div id="file-collection-container" class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-10">
+
+                <section id="collection-overview">
+                    <h3 class="page-header">
+                            Unknown Files Collection
+
+
+                        <div class="pull-right">
+
+                            <a href="#" id="copy-sha256s" class="btn btn-default btn-xs">
+                                <i class="fa fa-clipboard"></i> Copy SHA256s
+                            </a>
+                                                                                </div>
+                    </h3>
+                    <div id="overview-container" class="row">
+                        
+<div class="col-xs-12 col-sm-8 col-md-9 main-content">
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 text-right-sm"><b>Number of files:</b></div>
+        <div class="col-xs-12 col-sm-9">
+            12
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 text-right-sm"><b>Sandbox Reports:</b></div>
+        <div class="col-xs-12 col-sm-9">
+            0
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 text-right-sm"><b>Created At:</b></div>
+        <div class="col-xs-12 col-sm-9" id="last-av-scan-label">
+            03/02/2022 18:43:55 (UTC)
+        </div>
+    </div>
+    
+    </div>
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+    <div id="basic-malware-detection-info" class="text-right small">
+        <div class="main-verdict">
+                <span class="label label-success">
+        no specific threat
+    </span>
+
+        </div>
+                                    <span id="share-buttons-separator" class="pull-right"></span>
+            <span id="share-buttons" class="pull-right text-right">
+                                                            <a id="share-link-button" data-href="/file-collection/621fbaeb0e684b77aa42ba93/share/link" class="btn btn-primary btn-xs mall" data-process-message="Generating ...">
+                            <i class="fa fa-link"></i>
+                            <span class="small">Link</span>
+                        </a>
+                        <a href="/file-collection/621fbaeb0e684b77aa42ba93/share/twitter" class="twitter-share-button btn btn-xs small" target="_blank">
+                            <span class="small"><i class="fa fa-twitter"></i> Twitter</span>
+                        </a>
+                                        <a id="share-report-by-button" href="#" data-url="/file-collection/621fbaeb0e684b77aa42ba93/share/email" class="btn btn-primary btn-xs small trigger-ajax-form">
+                        <span class="small"><i class="fa fa-share"></i> E-Mail</span>
+                    </a>
+                           </span>
+            </div>
+</div>
+
+                    </div>
+                </section>
+
+                                    <section id="av-detection" class="hide-av-section">
+    <h3 class="page-header">
+        Anti-Virus Results
+    </h3>
+
+    <div class="row av-results-wrapper has-falcon-button">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                <div id="chart-cs-ml-container" class="text-center av-container border-default"
+                     data-chart="chart-cs-ml">
+                    <div class="title">CrowdStrike Falcon</div>
+                    <div class="main-frame">
+                        <div id="chart-cs-ml" data-json="{&quot;border&quot;:&quot;border-default&quot;,&quot;title&quot;:&quot;&quot;,&quot;load&quot;:[[&quot;no-result&quot;,12]],&quot;unload&quot;:[&quot;malicious&quot;,&quot;clean&quot;,&quot;error&quot;,&quot;unknown&quot;,&quot;in-progress&quot;]}"></div>
+                        <div class="details">
+                            <div class="scan-result"></div>
+                            <div class="demo">
+                                <a href="https://www.crowdstrike.com/resources/free-trials/try-falcon-prevent/" class="btn btn-default" target="_blank">
+                                    <img src="/img/cs_icon.svg" alt="">
+                                    GET STARTED WITH A FREE TRIAL
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                <div id="chart-md-container" class="text-center av-container border-default" data-chart="chart-md">
+                    <div class="title">MetaDefender</div>
+                    <div class="main-frame">
+                        <div id="chart-md" data-json="{&quot;border&quot;:&quot;border-success&quot;,&quot;title&quot;:&quot;No threat found&quot;,&quot;load&quot;:[[&quot;clean&quot;,12]],&quot;unload&quot;:[&quot;malicious&quot;,&quot;error&quot;,&quot;no-result&quot;,&quot;unknown&quot;,&quot;in-progress&quot;]}"></div>
+                        <div class="details">
+                            <div class="scan-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div id="chart-vt-container" class="text-center av-container border-default" data-chart="chart-vt">
+                    <div class="title">VirusTotal</div>
+                    <div class="main-frame">
+                        <div id="chart-vt" data-json="{&quot;border&quot;:&quot;border-default&quot;,&quot;title&quot;:&quot;&quot;,&quot;load&quot;:[[&quot;no-result&quot;,12]],&quot;unload&quot;:[&quot;malicious&quot;,&quot;clean&quot;,&quot;error&quot;,&quot;unknown&quot;,&quot;in-progress&quot;]}"></div>
+                        <div class="details">
+                            <div class="scan-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+</section>
+                
+                <section id="collection-files">
+                    <h3 class="page-header">
+                        Files
+
+                        <div class="dropdown pull-right">
+                            <button id="fc-files-actions" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" class="btn btn-default btn-xs disabled">
+                                <i class="fa fa-cogs"></i> Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="fc-main-actions">
+                                <li>
+                                    <a href="#" id="copy-sha256s-selected">
+                                        <i class="fa fa-clipboard"></i> Copy SHA256s
+                                    </a>
+                                </li>
+                                                                                            </ul>
+                        </div>
+                    </h3>
+                    <div id="files-container">
+                        <table id="files-table" class="table table-striped">
+    <thead>
+    <tr>
+        <th>File name</th>
+        <th>SHA256</th>
+        <th>Tags</th>
+        <th>AV Result</th>
+        <th class="text-center">Sandbox Report</th>
+        <th class="text-center">Verdict</th>
+        <th class="text-right">
+            <input type="checkbox" id="select-all-checkbox">
+        </th>
+    </tr>
+    </thead>
+    <tbody data-link="row" class="rowlink">
+                    <tr   data-index="0">
+            
+
+<td class="filename">
+            <a href="/sample/85c2cf28bdadfa8460e1efd7fcb04aa1d8fccac38f6f5e647ca65bd7d5d0c20e" target="_blank">                            <span class="vx-tooltip" data-title="3. Basic Customer Needs.srt">3. Basic Customer Needs.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="85c2cf28bdadfa8460e1efd7fcb04aa1d8fccac38f6f5e647ca65bd7d5d0c20e">
+        85c2cf28...d5d0c20e
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="85c2cf28bdadfa8460e1efd7fcb04aa1d8fccac38f6f5e647ca65bd7d5d0c20e">
+</td>
+        </tr>
+                    <tr   data-index="1">
+            
+
+<td class="filename">
+            <a href="/sample/d90b62ca14e3775351f514bb03220bcb5bdaec93132c6e8a77fadb237960c5db" target="_blank">                            <span class="vx-tooltip" data-title="4. Customer Experience.mp4">4. Customer Experience.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="d90b62ca14e3775351f514bb03220bcb5bdaec93132c6e8a77fadb237960c5db">
+        d90b62ca...7960c5db
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="d90b62ca14e3775351f514bb03220bcb5bdaec93132c6e8a77fadb237960c5db">
+</td>
+        </tr>
+                    <tr   data-index="2">
+            
+
+<td class="filename">
+            <a href="/sample/3612c58312b0a3d3f19acbbaaad133f7c5a9d58cf34200378f2da642084069f1" target="_blank">                            <span class="vx-tooltip" data-title="4. Customer Experience.srt">4. Customer Experience.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="3612c58312b0a3d3f19acbbaaad133f7c5a9d58cf34200378f2da642084069f1">
+        3612c583...084069f1
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="3612c58312b0a3d3f19acbbaaad133f7c5a9d58cf34200378f2da642084069f1">
+</td>
+        </tr>
+                    <tr   data-index="3">
+            
+
+<td class="filename">
+            <a href="/sample/ba8fbe9be5fe782f9ae3bf2328a745dade2a576aa3da0de82229eb3fe3b145cc" target="_blank">                            <span class="vx-tooltip" data-title="5. Describe Customer Segments and Personas.mp4">5. Describe Customer Segments and Personas.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="ba8fbe9be5fe782f9ae3bf2328a745dade2a576aa3da0de82229eb3fe3b145cc">
+        ba8fbe9b...e3b145cc
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="ba8fbe9be5fe782f9ae3bf2328a745dade2a576aa3da0de82229eb3fe3b145cc">
+</td>
+        </tr>
+                    <tr   data-index="4">
+            
+
+<td class="filename">
+            <a href="/sample/afa14b14a46a36f3c63a6f963763d3883a75970f98e53c4a6e1fcc1e48e669b4" target="_blank">                            <span class="vx-tooltip" data-title="5. Describe Customer Segments and Personas.srt">5. Describe Customer Segments and Personas.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="afa14b14a46a36f3c63a6f963763d3883a75970f98e53c4a6e1fcc1e48e669b4">
+        afa14b14...48e669b4
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="afa14b14a46a36f3c63a6f963763d3883a75970f98e53c4a6e1fcc1e48e669b4">
+</td>
+        </tr>
+                    <tr   data-index="5">
+            
+
+<td class="filename">
+            <a href="/sample/2a1843dc842607261788c6b7d062f6a08eb620ed7373526041a8c69fa37af6c5" target="_blank">                            <span class="vx-tooltip" data-title="6. Key Takeaways.mp4">6. Key Takeaways.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="2a1843dc842607261788c6b7d062f6a08eb620ed7373526041a8c69fa37af6c5">
+        2a1843dc...a37af6c5
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="2a1843dc842607261788c6b7d062f6a08eb620ed7373526041a8c69fa37af6c5">
+</td>
+        </tr>
+                    <tr   data-index="6">
+            
+
+<td class="filename">
+            <a href="/sample/bfb1e79528e93628639c44fa7d5ffc437813cbabf2e89bdd1938e28f252fdc32" target="_blank">                            <span class="vx-tooltip" data-title="6. Key Takeaways.srt">6. Key Takeaways.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="bfb1e79528e93628639c44fa7d5ffc437813cbabf2e89bdd1938e28f252fdc32">
+        bfb1e795...252fdc32
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="bfb1e79528e93628639c44fa7d5ffc437813cbabf2e89bdd1938e28f252fdc32">
+</td>
+        </tr>
+                    <tr   data-index="7">
+            
+
+<td class="filename">
+            <a href="/sample/736277c9cfb7e5a8cf61b95e766abe5d8956f8be63db1ff867258b80af1dd973" target="_blank">                            <span class="vx-tooltip" data-title="1. Positioning Customer Needs.mp4">1. Positioning Customer Needs.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="736277c9cfb7e5a8cf61b95e766abe5d8956f8be63db1ff867258b80af1dd973">
+        736277c9...af1dd973
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="736277c9cfb7e5a8cf61b95e766abe5d8956f8be63db1ff867258b80af1dd973">
+</td>
+        </tr>
+                    <tr   data-index="8">
+            
+
+<td class="filename">
+            <a href="/sample/1ae8af033b763b46da9871c7ac3fccc9404a667f49f21cf2ef2aaa4f2316b852" target="_blank">                            <span class="vx-tooltip" data-title="1. Positioning Customer Needs.srt">1. Positioning Customer Needs.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="1ae8af033b763b46da9871c7ac3fccc9404a667f49f21cf2ef2aaa4f2316b852">
+        1ae8af03...2316b852
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="1ae8af033b763b46da9871c7ac3fccc9404a667f49f21cf2ef2aaa4f2316b852">
+</td>
+        </tr>
+                    <tr   data-index="9">
+            
+
+<td class="filename">
+            <a href="/sample/3bcabe8358f63a4d1c0f932747efeb8c9dfe6ce990bd0d959f5558ee8c08ecb9" target="_blank">                            <span class="vx-tooltip" data-title="2. Customer Needs.mp4">2. Customer Needs.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="3bcabe8358f63a4d1c0f932747efeb8c9dfe6ce990bd0d959f5558ee8c08ecb9">
+        3bcabe83...8c08ecb9
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="3bcabe8358f63a4d1c0f932747efeb8c9dfe6ce990bd0d959f5558ee8c08ecb9">
+</td>
+        </tr>
+                    <tr   data-index="10">
+            
+
+<td class="filename">
+            <a href="/sample/bc2a3162a00dba3d7521c7f712e0f02bc45c95ebbb783a57a7e1d7aaaa5463de" target="_blank">                            <span class="vx-tooltip" data-title="2. Customer Needs.srt">2. Customer Needs.srt</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="bc2a3162a00dba3d7521c7f712e0f02bc45c95ebbb783a57a7e1d7aaaa5463de">
+        bc2a3162...aa5463de
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="bc2a3162a00dba3d7521c7f712e0f02bc45c95ebbb783a57a7e1d7aaaa5463de">
+</td>
+        </tr>
+                    <tr   data-index="11">
+            
+
+<td class="filename">
+            <a href="/sample/1791c393b16e75b343ae415dfcb469fa1e0bd67105c32b3858852da8530e6655" target="_blank">                            <span class="vx-tooltip" data-title="3. Basic Customer Needs.mp4">3. Basic Customer Needs.mp4</span>
+
+                
+</a>
+    </td>
+<td>
+    <span class="vx-tooltip contain-hash" data-title="1791c393b16e75b343ae415dfcb469fa1e0bd67105c32b3858852da8530e6655">
+        1791c393...530e6655
+    </span>
+</td>
+<td class="rowlink-skip">
+            -
+    </td>
+
+<td data-order="0">
+                        <span>Marked as clean</span>
+            </td>
+<td class="text-center rowlink-skip">
+            <i class="text-danger fa fa-remove"></i>
+    </td>
+
+
+    
+<td class="text-center" data-order="40">
+            <span class="label label-success">
+            no specific threat
+        </span>
+    </td>
+<td class="rowlink-skip text-right">
+    <input type="checkbox" class="contain-hash" name="ids[]" value="1791c393b16e75b343ae415dfcb469fa1e0bd67105c32b3858852da8530e6655">
+</td>
+        </tr>
+        </tbody>
+</table>
+
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <div class="sample-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                    <ul class="nav sample-sidenav">
+                        <li class="active"><a href="#collection-overview">Analysis Overview</a></li>
+                                                    <li><a href="#av-detection">Anti-Virus Scanner Results</a></li>
+                                                <li class=""><a href="#collection-files">Files</a></li>
+                    </ul>
+                    <a class="back-to-top" href="#top">
+                        Back to top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    <footer>
+                                                <div class="container-fluid">
+                    <div class="pull-left hidden-xs">
+                        &copy; 2022 <a href="https://www.crowdstrike.com/endpoint-security-products/falcon-sandbox-malware-analysis/" target="_blank">Hybrid Analysis</a>
+                        — <a href="/terms" target="_blank" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+                        — <a href="/data-protection-policy" title="Data Protection Policy">Data Protection Policy</a>
+                        — <a href="/imprint" title="Imprint">Imprint</a>                    </div>
+                    <div class="pull-left visible-xs">
+                        &copy; 2022 <a href="https://www.crowdstrike.com/endpoint-security-products/falcon-sandbox-malware-analysis/" target="_blank">Hybrid Analysis</a>
+                        — <a href="/terms" target="_blank" title="Terms &amp; Conditions">Terms</a>
+                        — <a href="/data-protection-policy" title="Data Protection Policy">Data Protection Policy</a>
+                        — <a href="/imprint" title="Imprint">Imprint</a>                    </div>
+                    <div class="social pull-right">
+                        <a href="https://twitter.com/HybridAnalysis" target="_blank" title="@HybridAnalysis on Twitter"><i class="icon-twitter"></i></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </footer>
+        
+                
+        <script src="/assets/5172afaed62c181076e49f8693fe980f8d0c18e3daef093222ac240d4d9bd078.min.js"></script>
+
+        <div id="alert-message-modal" class="modal fade" style="z-index: 9999">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-labeled" data-dismiss="modal"><span class="btn-label"><i class="fa fa-check"></i></span> Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+        
+        <script type="application/javascript">
+            VxWebService.initConfig({
+                translation: {
+                    processMessage: 'Guardando',
+                },
+                config: {
+                    publicService: true,
+                    flashFadeaway: true,
+                    fadeawayTimeout: 15,
+                    autoLogout: false,
+                    autoLogoutTimeout: 0,
+                    reCaptcha: '6LeJvv0SAAAAAG8IuH0lT5UnCjGxQHHqXJNsX-uT',
+                    enableRecaptchaForSubmissions: true
+                }
+            });
+            $(document).ready(function () {
+                VxWebService.init();
+            });
+        </script>
+
+        <div id="modals">
+            <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content"></div>
+                </div>
+            </div>
+            <div class="modal fade" id="main-modal" role="dialog"></div>
+            <div class="modal fade" id="form-ajax-modal" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="internal-animsition-loading"></div><div class="content" style="display: none"></div></div></div></div>
+                            <form action="" method="get" class="fo">
+    <div class="modal fade" id="language-modal" tabindex="-1" role="dialog" aria-labelledby="language-modal-label">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="language-modal-label">Change Language</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="language-switch-select" class="sr-only">New Language</label>
+                        <select name="lang" id="language-switch-select" class="form-control">
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=en" >English</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=de" >Deutsch</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=es-eu" >Español (EU)</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=es"  selected="selected">Español (Latin)</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=fr" >Français</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=it" >Italiano</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=nl" >Nederlands</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=pl" >Polski</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=pt" >Português</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=ru" >Русский</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=tr" >Türkçe</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=ar" >اللغة العربية</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=id" >Bahasa Indonesia</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=ja" >日本語</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=ko" >韓國語</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=ms" >Bahasa Malaysia</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=th" >ภาษาไทย</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=vi" >Tiếng Việt</option>
+                                                            <option value="/file-collection/621fbaeb0e684b77aa42ba93?lang=zh" >简体中文</option>
+                                                    </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default button-close" data-dismiss="modal">Close</button>
+                    <button type="button" id="language-execute-switch" class="btn btn-primary btn-labeled ladda-button" data-process-message="Changing...">
+                        <span class="btn-label">
+                            <i class="fas fa-save"></i></span> <span class="ladda-label"> Save
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+                                    <div id="required-vetting-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Vetting required</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Hybrid Analysis requires that users undergo the Hybrid Analysis Vetting Process prior to obtaining an API key or downloading malware samples. Please note that you must abide by the Hybrid Analysis Terms and Conditions and only use these samples for research purposes. You are not permitted to share your user credentials or API key with anyone else. Please notify Hybrid Analysis immediately if you believe that your API key or user credentials have been compromised.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a data-href="/vetting/request?key=85d461e528b679c074bdb69e4106b29797930cd96df416fc4e469246541c39d6307f5962201fa4e4bd3817649f8bea3eabc79c3ea1a384c09ee4be251aa01c9f3372" class="btn btn-primary btn-labeled"><span class="btn-label"><i class="fa fa-check"></i></span> Click here to begin the Hybrid Analysis Vetting Process</a>
+                <button type="button" class="btn btn-default btn-labeled" data-dismiss="modal"><span class="btn-label"><i class="fa fa-times"></i></span> Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+                            <div id="modal-share-link" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Link</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+
+            <script type="application/javascript">
+        Config = {
+            enableVetting: true
+        };
+    </script>
+
+    <script src="/assets/9fe54e07da3b51652b51fbc6865672a21f99caebd0a0a0851de415e3fb9beb7f.min.js"></script>
+
+                    <script type="application/javascript">
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', "UA-49856974-3", 'auto');
+                ga('require', 'displayfeatures');
+                ga('send', 'pageview');
+            </script>
+        
+            </body>
+</html>
